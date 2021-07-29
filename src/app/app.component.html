@@ -47,15 +47,10 @@
   </div>
 
   <!--AQUI SERÃO IMPLEMENTADOS OS NOSSOS CÓDIGOS-->
+  
   <div>
-    <div>
-      <span>Insira seu nome</span>
-      <input [(ngModel)] = "nome" type="text" />
-    </div>
-    <div>
-      <span>O seu nome é: </span>
-      <span>{{ nome }}</span>
-    </div>
+    <app-message [mensagem] = "'Texto vinculado / enviado do componente-pai!'" [alert] = "texto">
+    </app-message>
   </div>
   
   <!--AQUI SERÃO IMPLEMENTADOS OS NOSSOS CÓDIGOS-->
@@ -128,4 +123,16 @@
     <input type="button" value="Clique Aqui" (click) = "exibirAlerta()" /> 
     <br /><br />
     <input type="button" value="Passe o mouse" (mouseenter) = "exibirAlerta()" />
+  </div> -->
+
+  <!-- 
+    <div>
+    <div>
+      <span>Insira seu nome</span>
+      <input [(ngModel)] = "nome" type="text" />
+    </div>
+    <div>
+      <span>O seu nome é: </span>
+      <span>{{ nome }}</span>
+    </div>
   </div> -->

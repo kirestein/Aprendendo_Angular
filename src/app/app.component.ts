@@ -13,8 +13,9 @@ export class AppComponent {
 
   // AQUI SERÃO IMPLEMENTADOS OS NOSSOS CÓDIGOS
 
-  /*AQUI VAMOS IMPLEMENTAR NOSSAS VARIAVEIS PARA ESTABELECER O INTERPOLATION DATA BINDING*/
-  public nome: string = "" 
+  /*Trabalhando com o @Input Property*/
+
+  public texto: string = 'Este é o conteúdo da caixa de dialogo alert' 
 
 }
 
