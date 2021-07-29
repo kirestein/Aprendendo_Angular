@@ -47,21 +47,15 @@
   </div>
 
   <!--AQUI SERÃO IMPLEMENTADOS OS NOSSOS CÓDIGOS-->
-
-  <!-- Implementando o Interpolation data binding -->
-
   <div>
-    <span>O número indicadop na variável x é: {{x}}</span>
-    <br><br>
-
-    <span>A coleção de dados é: {{umArray}}</span>
-    <br><br>
-
-    <span>A data de hoje é: {{dataHoje}}</span>
-    <br><br>
-
-    <span>A variável boolena é indicada agora como: {{statusBooleano}}</span>
-    <br><br>
+    <div>
+      <span>Insira seu nome</span>
+      <input [(ngModel)] = "nome" type="text" />
+    </div>
+    <div>
+      <span>O seu nome é: </span>
+      <span>{{ nome }}</span>
+    </div>
   </div>
   
   <!--AQUI SERÃO IMPLEMENTADOS OS NOSSOS CÓDIGOS-->
@@ -85,3 +79,53 @@
 
 
 <!--AQUI SERÁ O NOSSO REPOSITÓRIO DE CÓDIGOS QUE FUNCIONARAM-->
+
+<!-- <div>
+    <span>O número indicadop na variável x é: {{x}}</span>
+    <br><br>
+
+    <span>A coleção de dados é: {{umArray}}</span>
+    <br><br>
+
+    <span>A data de hoje é: {{dataHoje}}</span>
+    <br><br>
+
+    <span>A variável boolena é indicada agora como: {{statusBooleano}}</span>
+    <br><br>
+
+    <span>{{ statusBooleano ? "Este é o resultado para o status true" :
+      "Este pe o resultado para o status false" }}</span>
+    <br><br>
+
+    <span>{{ exibirTexto() }}</span>
+    <br><br>
+  </div>
+<div>
+    <span>O número indicadop na variável x é: <input [value] = "x"></span>
+    <br><br>
+
+    <span>A coleção de dados é: <input [value] = "umArray"></span>
+    <br><br>
+
+    <span>A data de hoje é: </span>
+    <br><br>
+
+    <span>A variável boolena é indicada agora como: </span>
+    <br><br>
+
+    <span>{{ statusBooleano ? "Este é o resultado para o status true" :
+      "Este pe o resultado para o status false" }}</span>
+    <br><br>
+
+    <span>{{ exibirTexto() }}</span>
+    <br><br>
+  </div>
+   -->
+
+   <!-- Implementação event binding
+      <div>
+    <h2>Exemplo  Event Binding Angular</h2>
+    <input type="button" value="Clique Aqui" (click) = "exibirAlerta()" /> 
+    <br /><br />
+    <input type="button" value="Passe o mouse" (mouseenter) = "exibirAlerta()" />
+  </div> -->
