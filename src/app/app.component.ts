@@ -12,22 +12,14 @@ export class AppComponent {
   title = 'angular-alpha';
 
   // AQUI SERÃO IMPLEMENTADOS OS NOSSOS CÓDIGOS
-  subtitulo:string = '5 Filmes sensacionais'
-  filmes: Filme[] = [
-    {titulo:'O poderoso Chefão',direcao:'Francis Ford Coppola ',elenco:'Marlon Brando, Al Pacino, James Caan', anoLancamento:'10 de setembro, 1972'}, {titulo:'Um Estranho no Ninho',direcao:'Milos Forman',elenco:'Jack Nicholson, Louise Fletcher, Michael Berryman ',anoLancamento:'26 de maio, 1976'}, {titulo:'A lista de Schindler',direcao:'Steven Spielberg' ,elenco:'Liam Neeson, Ralph Fiennes, Ben Kingsley',anoLancamento:'11 de março, 1993'}, {titulo:'Forrest Gump - O contador de histórias',direcao: 'Robert Zemeckis',elenco:'Tom Hanks, Robin Wright, Gary Sin ise',anoLancamento:'7 de dezembro, 1994'}, {titulo:'Laranja Mecânica',direcao:'Stanley Kubrik',elenco:'Malcolm McDowell, Patrick Magee, Michael Bates ',anoLancamento:'04 de setembro, 1971'}
-  ]
-
-  
-
+cssAlteradoViaVar: string = 'color size'
+umaClasseCss: UmaClasseCss = new UmaClasseCss()
 
 }
 
-// Aqui vamos cirar nosso model para trabalhar com a diretiva *ngFor
-class Filme{
-  titulo!:string
-  direcao!:string
-  elenco!:string
-  anoLancamento!:string
+class UmaClasseCss {
+  color: boolean = true
+  size: boolean = true
 }
 
 /*AQUI SERÁ O NOSSO REPOSITÓRIO DE CÓDIGOS QUE FUNCIONARAM*/
@@ -67,4 +59,30 @@ class Filme{
   /*
   // Aqui vamos implementar uma propriedade do tipo booleana
   exibir!:boolean
+  */
+
+  /*
+  
+   subtitulo:string = '5 Filmes sensacionais'
+  filmes: Filme[] = [
+    {titulo:'O poderoso Chefão',direcao:'Francis Ford Coppola ',elenco:'Marlon Brando, Al Pacino, James Caan', anoLancamento:'10 de setembro, 1972'}, {titulo:'Um Estranho no Ninho',direcao:'Milos Forman',elenco:'Jack Nicholson, Louise Fletcher, Michael Berryman ',anoLancamento:'26 de maio, 1976'}, {titulo:'A lista de Schindler',direcao:'Steven Spielberg' ,elenco:'Liam Neeson, Ralph Fiennes, Ben Kingsley',anoLancamento:'11 de março, 1993'}, {titulo:'Forrest Gump - O contador de histórias',direcao: 'Robert Zemeckis',elenco:'Tom Hanks, Robin Wright, Gary Sin ise',anoLancamento:'7 de dezembro, 1994'}, {titulo:'Laranja Mecânica',direcao:'Stanley Kubrik',elenco:'Malcolm McDowell, Patrick Magee, Michael Bates ',anoLancamento:'04 de setembro, 1971'}
+  ]
+
+  
+
+
+}
+
+// Aqui vamos cirar nosso model para trabalhar com a diretiva *ngFor
+class Filme{
+  titulo!:string
+  direcao!:string
+  elenco!:string
+  anoLancamento!:string
+}
+
+
+
+algarismo:number  = 0
+
   */

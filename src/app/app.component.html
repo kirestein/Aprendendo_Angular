@@ -48,15 +48,6 @@
 
   <!--AQUI SERÃO IMPLEMENTADOS OS NOSSOS CÓDIGOS-->
   
-  <h2>{{ subtitulo }}</h2>
-  <ul>
-    <li *ngFor="let i of filmes">
-      {{ i.titulo }} - {{ i.direcao }}: {{ i.anoLancamento }}
-    </li>
-  </ul> 
-  
-
-  
   
   
   <!--AQUI SERÃO IMPLEMENTADOS OS NOSSOS CÓDIGOS-->
@@ -121,17 +112,17 @@
     <span>{{ exibirTexto() }}</span>
     <br><br>
   </div>
-   -->
+   
 
-   <!-- Implementação event binding
+    Implementação event binding
       <div>
     <h2>Exemplo  Event Binding Angular</h2>
     <input type="button" value="Clique Aqui" (click) = "exibirAlerta()" /> 
     <br /><br />
     <input type="button" value="Passe o mouse" (mouseenter) = "exibirAlerta()" />
-  </div> -->
+  </div> 
 
-  <!-- 
+   
     <div>
     <div>
       <span>Insira seu nome</span>
@@ -141,27 +132,27 @@
       <span>O seu nome é: </span>
       <span>{{ nome }}</span>
     </div>
-  </div> -->
+  </div> 
 
-  <!-- 
+  <
     input
     <div>
     <app-message [mensagem] = "'Texto vinculado / enviado do componente-pai!'" [alert] = "texto">
     </app-message>
   </div>
-   -->
+   
 
-   <!-- 
+   
      output
   <div>
     <app-message (exibirDados)="umaEstante($event)">
 
     </app-message>
   </div>
-    -->
+   
 
-    <!-- 
-      <h1>Usando a  diretiva*ngIf</h1>
+
+   <h1>Usando a  diretiva*ngIf</h1>
   <div>
     Exibir<input type = "checkbox" [(ngModel)] = "exibir" />
   </div>
@@ -180,7 +171,7 @@
     Texto exibido quando chackbox estiver  ativado - este é o uso de *ngIf-Else
   </p>
 
-  <!-- Vamos criar nosso primeiro ng-template 
+   Vamos criar nosso primeiro ng-template 
   <ng-template #blocoCodigoElse>
     <p>Texto exibido quando o checkbox estiver desativado - usando o blocoCodigoElse</p>
   </ng-template>
@@ -201,4 +192,67 @@
   <p [hidden] = "!exibir">
     Texto exibido quando o checkbox estiver ativado - usando a propriedade hidden
   </p>
-     -->
+  
+  
+  
+  <h2>{{ subtitulo }}</h2>
+  <ul>
+    <li *ngFor="let i of filmes">
+      {{ i.titulo }} - {{ i.direcao }}: {{ i.anoLancamento }}
+    </li>
+  </ul> 
+  
+
+  
+  
+  
+   <ng-container *ngIf="expression; then thenTemplate; else elseTemplate"></ng-container>
+      <ng-template #thenTemplate>
+        
+      </ng-template>
+      <ng-template #elseTemplate>
+        
+      </ng-template> 
+    
+    
+    
+    <h2>{{ subtitulo }}</h2>
+  <table class="bordaTabela">
+    <thead>
+      <tr>
+        <th>Titulo</th>
+        <th>Diretor</th>
+        <th>Elenco</th>
+        <th>Ano de Lançamento</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let i of filmes">
+        <td>{{ i.titulo }}</td>
+        <td>{{ i.direcao }}</td>
+        <td>{{ i.elenco }}</td>
+        <td>{{ i.anoLancamento }}</td>
+      </tr>
+    </tbody>
+  </table>
+    
+
+
+
+
+  <div>
+    <h2>Usando a diretiva ngSwitch</h2>
+    <p>Altere o valor inserindo um número: </p> <input type="text" [(ngModel)]  = "algarismo" />
+    <div [ngSwitch] = "algarismo">
+      <div *ngSwitchCase = "'1'">ngSwitch  - Elemento Um</div>
+      <div *ngSwitchCase = "'2'">ngSwitch  - Elemento Dois</div>
+      <div *ngSwitchCase = "'3'">ngSwitch  - Elemento Três</div>
+      <div *ngSwitchCase = "'4'">ngSwitch  - Elemento Quatro</div>
+      <div *ngSwitchCase = "'5'">ngSwitch  - Elemento Cinco</div>
+      <div *ngSwitchDefault>ngSwitch  - Elemento Default</div>
+    </div>
+  </div>
+
+
+    -->
+      
