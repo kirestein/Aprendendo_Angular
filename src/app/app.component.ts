@@ -12,10 +12,10 @@ export class AppComponent {
   title = 'angular-alpha';
 
   // AQUI SERÃO IMPLEMENTADOS OS NOSSOS CÓDIGOS
+  // Aqui vamos implementar uma propriedade do tipo booleana
 
-  /*Trabalhando com o @Input Property*/
+  exibir!:boolean
 
-  public texto: string = 'Este é o conteúdo da caixa de dialogo alert' 
 
 }
 
@@ -35,3 +35,20 @@ export class AppComponent {
   }
    
  */
+
+  /*
+  Trabalhando com o @Input Property
+
+  public texto: string = 'Este é o conteúdo da caixa de dialogo alert' 
+  */
+
+  /*
+  // Aqui vamos implementar  nossa função para consumir os dados do componente filho
+  public umaEstante(data:any): void {
+    let strMessage: string = data.nome + ', obrigado por se cadastrar. ' 
+    strMessage += 'O  e-mail ' + data.email + ' foi cadastrado com sucesso!'
+
+    // vamos subir esta informação num alert dialog
+    alert(strMessage)
+  }
+  */

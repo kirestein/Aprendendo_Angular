@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-message',
@@ -6,7 +6,20 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./message.component.css']
 })
 export class MessageComponent {
-  // Vamos implementar as propriedade de entrada de dados definidas com o @Input Decorator
+  // Aqui vamos implementar nosso Output Decorator
+  @Output() exibirDados = new EventEmitter<any>()
+
+  // Criando a nossa estrutura para nosso conjunto de dados
+  public data:any = {}
+  // Vamos criar nosso emissor de eventos
+  public enviarDados(): void {
+    this.exibirDados.emit(this.data)
+  }
+
+}
+
+/*
+// Vamos implementar as propriedade de entrada de dados definidas com o @Input Decorator
   @Input() public mensagem: string = ''
   @Input('alert') public outraMensagem: string = ''
 
@@ -14,6 +27,4 @@ export class MessageComponent {
   public exibirAlert(): void{
     alert(this.outraMensagem)
   }
-  
-
-}
+*/
