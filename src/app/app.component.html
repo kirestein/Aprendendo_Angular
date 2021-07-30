@@ -49,9 +49,11 @@
   <!--AQUI SERÃO IMPLEMENTADOS OS NOSSOS CÓDIGOS-->
   
   <h2>{{ subtitulo }}</h2>
-  <li *ngFor="let i of filmes">
-    
-  </li>
+  <ul>
+    <li *ngFor="let i of filmes">
+      {{ i.titulo }} - {{ i.direcao }}: {{ i.anoLancamento }}
+    </li>
+  </ul> 
   
 
   
