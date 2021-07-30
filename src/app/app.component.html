@@ -48,46 +48,10 @@
 
   <!--AQUI SERÃO IMPLEMENTADOS OS NOSSOS CÓDIGOS-->
   
-  <h1>Usando a  diretiva*ngIf</h1>
-  <div>
-    Exibir<input type = "checkbox" [(ngModel)] = "exibir" />
-  </div>
-
-  <h1>*ngIf - verificação simples</h1>
-  <p *ngIf="exibir">
-    Variável "exibir com checkbox ativado".
-  </p>
-  <p *ngIf="!exibir">
-    Este valor será exibido com o checkbox desativado
-  </p>
-
-  <h1>Diretiva *ngif-Else</h1>
-  <p *ngIf="exibir; else blocoCodigoElse">
+  <h2>{{ subtitulo }}</h2>
+  <li *ngFor="let i of filmes">
     
-    Texto exibido quando chackbox estiver  ativado - este é o uso de *ngIf-Else
-  </p>
-
-  <!-- Vamos criar nosso primeiro ng-template -->
-  <ng-template #blocoCodigoElse>
-    <p>Texto exibido quando o checkbox estiver desativado - usando o blocoCodigoElse</p>
-  </ng-template>
-
-  <h1>Usando a diretiva *ngIg-then-else</h1>
-  <p *ngIf="exibir; then blocoCodigoThen; else novoBlocoElse"></p>
-  <ng-template #blocoCodigoThen>
-    <p>Texto exiubido quando o checkbos estiver ativado - usando blocoCodigoThen</p>
-  </ng-template>
-  <ng-template #novoBlocoElse>
-    <p>Texto exibido quando o checkbox estiver desativado - usando novoBlocoElse</p>
-  </ng-template>
-
-  <h1>Usando a propriedade hidden</h1>
-  <p [hidden] = "exibir">
-    Texto exibido quando o checkbox estiver desativado - usando a propriedade hidden
-  </p>
-  <p [hidden] = "!exibir">
-    Texto exibido quando o checkbox estiver ativado - usando a propriedade hidden
-  </p>
+  </li>
   
 
   
@@ -193,3 +157,46 @@
     </app-message>
   </div>
     -->
+
+    <!-- 
+      <h1>Usando a  diretiva*ngIf</h1>
+  <div>
+    Exibir<input type = "checkbox" [(ngModel)] = "exibir" />
+  </div>
+
+  <h1>*ngIf - verificação simples</h1>
+  <p *ngIf="exibir">
+    Variável "exibir com checkbox ativado".
+  </p>
+  <p *ngIf="!exibir">
+    Este valor será exibido com o checkbox desativado
+  </p>
+
+  <h1>Diretiva *ngif-Else</h1>
+  <p *ngIf="exibir; else blocoCodigoElse">
+    
+    Texto exibido quando chackbox estiver  ativado - este é o uso de *ngIf-Else
+  </p>
+
+  <!-- Vamos criar nosso primeiro ng-template 
+  <ng-template #blocoCodigoElse>
+    <p>Texto exibido quando o checkbox estiver desativado - usando o blocoCodigoElse</p>
+  </ng-template>
+
+  <h1>Usando a diretiva *ngIg-then-else</h1>
+  <p *ngIf="exibir; then blocoCodigoThen; else novoBlocoElse"></p>
+  <ng-template #blocoCodigoThen>
+    <p>Texto exiubido quando o checkbos estiver ativado - usando blocoCodigoThen</p>
+  </ng-template>
+  <ng-template #novoBlocoElse>
+    <p>Texto exibido quando o checkbox estiver desativado - usando novoBlocoElse</p>
+  </ng-template>
+
+  <h1>Usando a propriedade hidden</h1>
+  <p [hidden] = "exibir">
+    Texto exibido quando o checkbox estiver desativado - usando a propriedade hidden
+  </p>
+  <p [hidden] = "!exibir">
+    Texto exibido quando o checkbox estiver ativado - usando a propriedade hidden
+  </p>
+     -->
