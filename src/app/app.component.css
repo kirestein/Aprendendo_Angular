@@ -314,3 +314,12 @@
   color: white;
 }
   
+/* estilo que está sendo referenciado pela class e por outras chamadas em nossa view */
+
+.color {
+  color: blue;
+}
+
+.size {
+  size: 2rem;
+}

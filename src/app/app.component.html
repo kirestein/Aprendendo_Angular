@@ -47,7 +47,34 @@
   </div>
 
   <!--AQUI SERÃO IMPLEMENTADOS OS NOSSOS CÓDIGOS-->
-  
+  <p>diretiva ngClass</p>
+  <!-- primeira indicação de implementação -->
+  <div [ngClass] = "'color size'">
+    Texto com fonte e cor indicados no arquivo CSS. - propriedade de string
+  </div>
+
+  <!-- outro exemplo -->
+  <div ngClass = 'color size'>
+    Texto com fonte e cor indicados no arquivo CSS.  - string literal
+  </div>
+
+  <div [ngClass] = "['color', 'size']">
+    Texto com font e cor alterado pelo arquivo CSS. - array de propriedades
+  </div>
+
+  <div [ngClass] = "{'color': true, 'size': true}">
+    Texto com fonte e cor alterado pelo arquivo CSS - um object de propriedades
+  </div>
+
+  <!-- Agora as chamadas serão feitas ao arquivo .ts -->
+
+  <div [ngClass] = "cssAlteradoViaVar">
+    Texto com fonte e cor alterado pelo arquivo CSS - alterado pela propriedade indicado no app.component.ts
+  </div>
+
+  <div [ngClass] = "umaClasseCss">
+    Texto com fonte e cor alterado pelo arquivo CSS - alterado pela instância indicada no app.component.ts
+  </div>
   
   
   <!--AQUI SERÃO IMPLEMENTADOS OS NOSSOS CÓDIGOS-->
