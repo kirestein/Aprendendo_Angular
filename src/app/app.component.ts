@@ -12,15 +12,21 @@ export class AppComponent {
   title = 'angular-alpha';
 
   // AQUI SERÃO IMPLEMENTADOS OS NOSSOS CÓDIGOS
-cssAlteradoViaVar: string = 'color size'
-umaClasseCss: UmaClasseCss = new UmaClasseCss()
+  // Criar as propriedades para fazer uso do ngStyle
 
+  tamanho: number = 12
+  color: string = '#3380f6c'
+  estiloClasse: EstiloClasse = new EstiloClasse()
 }
 
-class UmaClasseCss {
-  color: boolean = true
-  size: boolean = true
+// Vamos criar nossa classe de estilo para usar com ngStyle
+
+class EstiloClasse {
+  color: string = '#ff5733'
+  'font-size.%': number = 150
+  'font-weight': string = 'bold'
 }
+
 
 /*AQUI SERÁ O NOSSO REPOSITÓRIO DE CÓDIGOS QUE FUNCIONARAM*/
 /* public x: number = 10
@@ -86,3 +92,16 @@ class Filme{
 algarismo:number  = 0
 
   */
+
+/*
+cssAlteradoViaVar: string = 'color size'
+umaClasseCss: UmaClasseCss = new UmaClasseCss()
+
+
+
+class UmaClasseCss {
+  color: boolean = true
+  size: boolean = true
+}
+
+*/
