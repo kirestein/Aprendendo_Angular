@@ -1,4 +1,4 @@
-import { Component, NgModule } from '@angular/core';
+import { Component, AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit, DoCheck, OnChanges, OnDestroy, OnInit } from '@angular/core';
 
 
 
@@ -8,24 +8,59 @@ import { Component, NgModule } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnChanges, OnInit, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy{
   title = 'angular-alpha';
 
   // AQUI SERÃO IMPLEMENTADOS OS NOSSOS CÓDIGOS
   // Criar as propriedades para fazer uso do ngStyle
+  exibirFilho: boolean = false
+  
+  constructor() {
+    console.log("AppConponent:Constructor");
+        
+  }
 
-  tamanho: number = 12
-  color: string = '#3380f6c'
-  estiloClasse: EstiloClasse = new EstiloClasse()
+  toggle() {
+    this.exibirFilho =! this.exibirFilho
+  }
+  // vamos começar a chamada dos hooks
+  ngOnChanges() {
+    console.log("AppComponent:OnChange")
+    
+  }
+
+  ngOnInit() {
+    console.log("AppComponent:OnInit")
+    
+  }
+
+  ngAfterContentChecked() {
+    console.log("AppComponent:AfterContentChecked")
+  }
+
+  ngDoCheck() {
+    console.log("AppComponent:DoCheck foi chamdo")    
+  }
+
+  ngAfterContentInit() {
+    console.log("AppComponent: AfterContentinit foi chamado")    
+  }
+
+  ngAfterViewInit() {
+    console.log("AppComponent: AfterViewInit foi chamado")    
+  }
+
+  ngAfterViewChecked() {
+    console.log("AppComponent: AfterViewChecked foi chamado")    
+  }
+
+  ngOnDestroy() {
+    console.log("AppComponent: OnDestroy foi chamado")  
+  }
+
+
 }
-
-// Vamos criar nossa classe de estilo para usar com ngStyle
-
-class EstiloClasse {
-  color: string = '#ff5733'
-  'font-size.%': number = 150
-  'font-weight': string = 'bold'
-}
+ 
 
 
 /*AQUI SERÁ O NOSSO REPOSITÓRIO DE CÓDIGOS QUE FUNCIONARAM*/
@@ -104,4 +139,19 @@ class UmaClasseCss {
   size: boolean = true
 }
 
+*/
+
+/*
+ tamanho: number = 12
+  color: string = '#3380f6c'
+  estiloClasse: EstiloClasse = new EstiloClasse()
+
+
+// Vamos criar nossa classe de estilo para usar com ngStyle
+
+class EstiloClasse {
+  color: string = '#ff5733'
+  'font-size.%': number = 150
+  'font-weight': string = 'bold'
+}
 */
