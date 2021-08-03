@@ -1,15 +1,56 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit, DoCheck, OnChanges, OnDestroy, OnInit, Input } from '@angular/core';
+
 
 @Component({
   selector: 'app-componente-filho',
   templateUrl: './componente-filho.component.html',
   styleUrls: ['./componente-filho.component.css']
 })
-export class ComponenteFilhoComponent implements OnInit {
+export class ComponenteFilhoComponent implements OnChanges, OnInit, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy {
 
-  constructor() { }
+  @Input() mensagem  = ""
+  constructor() {
+    console.log("Este é o construtor do componente-filho sendo chamado!");
+    
+   }
+   ngOnChanges() {
+     console.log('Componente-filho: onChange');
+     
+   }
 
-  ngOnInit(): void {
+   ngDoCheck() {
+    console.log('Componente-filho: doCheck');
+    
+  }
+
+  ngOnInit() {
+    console.log('Componente-filho: OnInit');
+    
+  }
+
+  ngAfterContentInit() {
+    console.log('Componente-filho: AftterContentInit');
+    
+  }
+
+  ngAfterContentChecked() {
+    console.log('Componente-filho: AfterContentChecked');
+    
+  }
+
+  ngAfterViewInit() {
+    console.log('Componente-filho: AfterViewInit');
+    
+  }
+
+  ngAfterViewChecked() {
+    console.log('Componente-filho: AfterViewChecked');
+    
+  }
+
+  ngOnDestroy() {
+    console.log('Componente-filho: OnDestroy');
+    
   }
 
 }
