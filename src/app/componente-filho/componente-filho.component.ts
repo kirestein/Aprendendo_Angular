@@ -1,4 +1,4 @@
-import { Component, AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit, DoCheck, OnChanges, OnDestroy, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 
 @Component({
@@ -6,7 +6,7 @@ import { Component, AfterContentChecked, AfterContentInit, AfterViewChecked, Aft
   templateUrl: './componente-filho.component.html',
   styleUrls: ['./componente-filho.component.css']
 })
-export class ComponenteFilhoComponent implements OnChanges, OnInit, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy {
+export class ComponenteFilhoComponent {
 
   @Input() mensagem  = ""
   constructor() {

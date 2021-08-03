@@ -7,13 +7,17 @@ import { FormsModule } from '@angular/forms';
 import { MessageComponent } from './message/message.component';
 import { AlterarTextoDirective } from './alterar-texto.directive';
 import { ComponenteFilhoComponent } from './componente-filho/componente-filho.component';
+import { HomeComponent } from './home/home.component';
+import { FaleConoscoComponent } from './fale-conosco/fale-conosco.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MessageComponent,
     AlterarTextoDirective,
-    ComponenteFilhoComponent
+    ComponenteFilhoComponent,
+    HomeComponent,
+    FaleConoscoComponent
   ],
   imports: [
     BrowserModule,
