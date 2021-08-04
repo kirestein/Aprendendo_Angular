@@ -12,52 +12,11 @@ export class AppComponent{
   title = 'angular-alpha';
 
   // AQUI SERÃO IMPLEMENTADOS OS NOSSOS CÓDIGOS
-  // Criar as propriedades para fazer uso do ngStyle
-  exibirFilho: boolean = false
   
-  constructor() {
-    console.log("AppConponent:Constructor");
-        
+  enviarDados(data:any) {
+    alert('O email inserido foi: ' + data.email)
   }
-
-  toggle() {
-    this.exibirFilho =! this.exibirFilho
-  }
-  // vamos começar a chamada dos hooks
-  ngOnChanges() {
-    console.log("AppComponent:OnChange")
-    
-  }
-
-  ngOnInit() {
-    console.log("AppComponent:OnInit")
-    
-  }
-
-  ngAfterContentChecked() {
-    console.log("AppComponent:AfterContentChecked")
-  }
-
-  ngDoCheck() {
-    console.log("AppComponent:DoCheck foi chamdo")    
-  }
-
-  ngAfterContentInit() {
-    console.log("AppComponent: AfterContentinit foi chamado")    
-  }
-
-  ngAfterViewInit() {
-    console.log("AppComponent: AfterViewInit foi chamado")    
-  }
-
-  ngAfterViewChecked() {
-    console.log("AppComponent: AfterViewChecked foi chamado")    
-  }
-
-  ngOnDestroy() {
-    console.log("AppComponent: OnDestroy foi chamado")  
-  }
-
+ 
 
 }
  
@@ -154,4 +113,56 @@ class EstiloClasse {
   'font-size.%': number = 150
   'font-weight': string = 'bold'
 }
+*/
+
+
+
+/*
+
+// Criar as propriedades para fazer uso do ngStyle
+ exibirFilho: boolean = false
+  
+  constructor() {
+    console.log("AppConponent:Constructor");
+        
+  }
+
+  toggle() {
+    this.exibirFilho =! this.exibirFilho
+  }
+  // vamos começar a chamada dos hooks
+  ngOnChanges() {
+    console.log("AppComponent:OnChange")
+    
+  }
+
+  ngOnInit() {
+    console.log("AppComponent:OnInit")
+    
+  }
+
+  ngAfterContentChecked() {
+    console.log("AppComponent:AfterContentChecked")
+  }
+
+  ngDoCheck() {
+    console.log("AppComponent:DoCheck foi chamdo")    
+  }
+
+  ngAfterContentInit() {
+    console.log("AppComponent: AfterContentinit foi chamado")    
+  }
+
+  ngAfterViewInit() {
+    console.log("AppComponent: AfterViewInit foi chamado")    
+  }
+
+  ngAfterViewChecked() {
+    console.log("AppComponent: AfterViewChecked foi chamado")    
+  }
+
+  ngOnDestroy() {
+    console.log("AppComponent: OnDestroy foi chamado")  
+  }
+
 */

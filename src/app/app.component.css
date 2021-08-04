@@ -323,3 +323,33 @@
 .size {
   size: 2rem;
 }
+
+a:link, a:visited {
+  background-color: #848686;
+  color: white;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+
+ }
+ a:hover, a:active {
+  background-color: #BD9696;
+ }
+
+ input[type = email], input[type = password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #B3A9A9;
+  box-sizing: border-box;
+ }
+ input[type = submit] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #B3A9A9;
+  box-sizing: border-box;
+ }

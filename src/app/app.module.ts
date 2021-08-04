@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule, RoutingComponent } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { MessageComponent } from './message/message.component';
@@ -16,8 +15,10 @@ import { FaleConoscoComponent } from './fale-conosco/fale-conosco.component';
     MessageComponent,
     AlterarTextoDirective,
     ComponenteFilhoComponent,
-    HomeComponent,
-    FaleConoscoComponent
+    RoutingComponent
+    // HomeComponent,
+    // FaleConoscoComponent,
+    
   ],
   imports: [
     BrowserModule,

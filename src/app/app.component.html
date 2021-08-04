@@ -48,9 +48,18 @@
 
   <!--AQUI SERÃO IMPLEMENTADOS OS NOSSOS CÓDIGOS-->
   
-  <h2>Life Hook Estudado</h2>
-  <button (click) = "toggle()">Exibir/Ocultar</button>
-  <app-componente-filho *ngIf = "exibirFilho" [mensagem] = "'@Input binding um salve do componente-pai!'"></app-componente-filho>
+  <nav>
+    <a routerLink = "/home">Home</a>
+    <a routerLink = "/faleconosco">Fale Conosco</a>
+  </nav>
+
+  <form #userlogin = "ngForm" (ngSubmit) = "enviarDados(userlogin.value)">
+    <input type="email" name="email" placeholder="Insira se email" ngModel />
+    <br />
+    <input type="password" name="senha" placeholder="Insira sua senha" ngModel />
+    <br />
+    <input type="submit" value="Enviar">
+  </form>
   
   <!--AQUI SERÃO IMPLEMENTADOS OS NOSSOS CÓDIGOS-->
 
@@ -314,6 +323,12 @@
 
 
   <h1 appAlterarTexto></h1>
+
+
+
+  <h2>Life Hook Estudado</h2>
+  <button (click) = "toggle()">Exibir/Ocultar</button>
+  <app-componente-filho *ngIf = "exibirFilho" [mensagem] = "'@Input binding um salve do componente-pai!'"></app-componente-filho>
 
     -->
       
