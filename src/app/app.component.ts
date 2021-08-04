@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 
 
@@ -13,9 +14,30 @@ export class AppComponent{
 
   // AQUI SERÃO IMPLEMENTADOS OS NOSSOS CÓDIGOS
   
-  enviarDados(data:any) {
-    alert('O email inserido foi: ' + data.email)
+  email:any
+  formdata:any
+
+  ngOnInit() {
+    this.formdata = new FormGroup({
+      email: new FormControl('', Validators.compose([
+        Validators.required,
+        Validators.pattern('[^ @]*@[^ @]*')
+      ])),
+      senha: new FormControl("", this.validacaoSenha)
+    })
   }
+
+  validacaoSenha(formcontrol:any) {
+    if(formcontrol.value.length < 5) {
+      return {"senha" : true}
+    }
+    return null
+  }
+
+  enviarDados(data:any) {
+    this.email = data.email
+  }
+  
  
 
 }
@@ -165,4 +187,9 @@ class EstiloClasse {
     console.log("AppComponent: OnDestroy foi chamado")  
   }
 
+*/
+
+/* 
+enviarDados(data:any) {
+    alert('O email inserido foi: ' + data.email)
 */

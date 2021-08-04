@@ -5,11 +5,13 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './fale-conosco.component.html',
   styleUrls: ['./fale-conosco.component.css']
 })
-export class FaleConoscoComponent implements OnInit {
+export class FaleConoscoComponent {
 
-  constructor() { }
+  // enviarDados(data:any) {
+  //   alert('O email inserido foi: ' + data.email)
+  // }
+  
 
-  ngOnInit(): void {
-  }
+
 
 }

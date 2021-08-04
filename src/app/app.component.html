@@ -47,19 +47,18 @@
   </div>
 
   <!--AQUI SERÃO IMPLEMENTADOS OS NOSSOS CÓDIGOS-->
-  
-  <nav>
-    <a routerLink = "/home">Home</a>
-    <a routerLink = "/faleconosco">Fale Conosco</a>
-  </nav>
+  <div>
+    <form [formGroup]="formdata" (ngSubmit) = "enviarDados(formdata.value)">
+      <input type="email" name="email" placeholder="Insira seu e-mail" formControlName="email" />
+      <br>
+      <input type="password" name="senha" placeholder="Insira sua senha" formControlName="senha">
+      <br>
+      <input type="submit" [disabled] = '!formdata.valid' value="Enviar">
+    </form>
+  </div>
 
-  <form #userlogin = "ngForm" (ngSubmit) = "enviarDados(userlogin.value)">
-    <input type="email" name="email" placeholder="Insira se email" ngModel />
-    <br />
-    <input type="password" name="senha" placeholder="Insira sua senha" ngModel />
-    <br />
-    <input type="submit" value="Enviar">
-  </form>
+  <p>O e-mail informado foi: {{ email }}</p>
+  
   
   <!--AQUI SERÃO IMPLEMENTADOS OS NOSSOS CÓDIGOS-->
 
@@ -330,5 +329,19 @@
   <button (click) = "toggle()">Exibir/Ocultar</button>
   <app-componente-filho *ngIf = "exibirFilho" [mensagem] = "'@Input binding um salve do componente-pai!'"></app-componente-filho>
 
+
+
+  <nav>
+    <a routerLink = "/home">Home</a>
+    <a routerLink = "/faleconosco">Fale Conosco</a>
+  </nav>
+
+  <form #userlogin = "ngForm" (ngSubmit) = "enviarDados(userlogin.value)">
+    <input type="email" name="email" placeholder="Insira se email" ngModel />
+    <br />
+    <input type="password" name="senha" placeholder="Insira sua senha" ngModel />
+    <br />
+    <input type="submit" value="Enviar">
+  </form>
     -->
       

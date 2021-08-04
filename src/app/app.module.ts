@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule, RoutingComponent } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MessageComponent } from './message/message.component';
 import { AlterarTextoDirective } from './alterar-texto.directive';
 import { ComponenteFilhoComponent } from './componente-filho/componente-filho.component';
@@ -16,6 +16,7 @@ import { FaleConoscoComponent } from './fale-conosco/fale-conosco.component';
     AlterarTextoDirective,
     ComponenteFilhoComponent,
     RoutingComponent
+    
     // HomeComponent,
     // FaleConoscoComponent,
     
@@ -23,7 +24,8 @@ import { FaleConoscoComponent } from './fale-conosco/fale-conosco.component';
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
