@@ -47,15 +47,7 @@
   </div>
 
   <!--AQUI SERÃO IMPLEMENTADOS OS NOSSOS CÓDIGOS-->
-  <div>
-    <form [formGroup]="formdata" (ngSubmit) = "enviarDados(formdata.value)">
-      <input type="email" name="email" placeholder="Insira seu e-mail" formControlName="email" />
-      <br>
-      <input type="password" name="senha" placeholder="Insira sua senha" formControlName="senha">
-      <br>
-      <input type="submit" [disabled] = '!formdata.valid' value="Enviar">
-    </form>
-  </div>
+  
 
   <p>O e-mail informado foi: {{ email }}</p>
   
@@ -343,5 +335,16 @@
     <br />
     <input type="submit" value="Enviar">
   </form>
+
+
+  <div>
+    <form [formGroup]="formdata" (ngSubmit) = "enviarDados(formdata.value)">
+      <input type="email" name="email" placeholder="Insira seu e-mail" formControlName="email" />
+      <br>
+      <input type="password" name="senha" placeholder="Insira sua senha" formControlName="senha">
+      <br>
+      <input type="submit" [disabled] = '!formdata.valid' value="Enviar">
+    </form>
+  </div>
     -->
       

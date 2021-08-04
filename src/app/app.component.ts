@@ -17,26 +17,7 @@ export class AppComponent{
   email:any
   formdata:any
 
-  ngOnInit() {
-    this.formdata = new FormGroup({
-      email: new FormControl('', Validators.compose([
-        Validators.required,
-        Validators.pattern('[^ @]*@[^ @]*')
-      ])),
-      senha: new FormControl("", this.validacaoSenha)
-    })
-  }
-
-  validacaoSenha(formcontrol:any) {
-    if(formcontrol.value.length < 5) {
-      return {"senha" : true}
-    }
-    return null
-  }
-
-  enviarDados(data:any) {
-    this.email = data.email
-  }
+  
   
  
 
@@ -192,4 +173,29 @@ class EstiloClasse {
 /* 
 enviarDados(data:any) {
     alert('O email inserido foi: ' + data.email)
+*/
+
+
+
+/*
+ngOnInit() {
+    this.formdata = new FormGroup({
+      email: new FormControl('', Validators.compose([
+        Validators.required,
+        Validators.pattern('[^ @]*@[^ @]*')
+      ])),
+      senha: new FormControl("", this.validacaoSenha)
+    })
+  }
+
+  validacaoSenha(formcontrol:any) {
+    if(formcontrol.value.length < 5) {
+      return {"senha" : true}
+    }
+    return null
+  }
+
+  enviarDados(data:any) {
+    this.email = data.email
+  }
 */
